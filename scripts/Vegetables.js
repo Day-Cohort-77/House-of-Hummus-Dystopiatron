@@ -6,7 +6,7 @@ export async function Veggies() {
     html += veggies.map(veggie => `
         <label>
             <input type="radio" name="vegetable" value="${veggie.id}" />
-            ${veggie.type}
+            ${veggie.type} <span class="price">($${veggie.price?.toFixed(2) ?? "0.00"})</span>
         </label>
     `).join("")
     html += "</section>"

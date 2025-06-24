@@ -1,4 +1,3 @@
-// This function gets all side dishes and returns HTML for radio buttons using map()
 export async function Sides() {
     const response = await fetch("http://localhost:8088/sides")
     const sides = await response.json()
@@ -7,7 +6,7 @@ export async function Sides() {
     html += sides.map(side => `
         <label>
             <input type="radio" name="sideDish" value="${side.id}" />
-            ${side.title}
+            ${side.title} <span class="price">($${side.price?.toFixed(2) ?? "0.00"})</span>
         </label>
     `).join("")
     html += "</section>"

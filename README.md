@@ -56,10 +56,29 @@ sequenceDiagram
 > 🧨 Before you click the "Assessment Complete" button on the Learning Platform, add your answers below for each question and make a commit. It is your option to request a face-to-face meeting with a coach for a vocabulary review.
 
 1. Should transient state be represented in a database diagram? Why, or why not?
+   
    > Your answer here
+   
+No, Transient state is temporary and not persistent/permanent. ERD's are used to show structures of persistent or permanenet data. Transient state is used impermanently and only used while the DOM is rendered or rerendering, it is not stored in a database.
+
+
 2. In the **FoodTruck** module, you are **await**ing the invocataion of all of the component functions _(e.g. sales, veggie options, etc.)_. Why must you use the `await` keyword there? Explain what happens if you remove it.
+   
    > Your answer here
+
+All asynchronus functions, or "async" functions, use `await` to resolve promises. Component functions use `await` so that promises can be resolved to return an HTML string. 
+If `await` is removed variables will hold unresolved promise objects, and `[object promise]` will be the resolved value, instead of desired content, thus, the page will not display objects or render correctly. 
+
 3. When the user is making choices by selecting radio buttons, explain how that data is retained so that the **Purchase Combo** button works correctly.
+  
    > Your answer here
+
+When the user selects an option with the radio button, a function is called to update the transient state object, temporarily storing its current selection. If one option from the three provided ID's have been selected, the "purchase combo" code checks to verify selections and creates a new purchase to process.
+
+
+
 4. You used the `map()` array method in the self assessment _(at least, you should have since it is a learning objective)_. Explain why that function is helpful as a replacement for a `for..of` loop.
+   
    > Your answer here
+
+the `.map()` method is helpful in that it is able to create a new array by applying a new function to each item in an original array with one line of code. 

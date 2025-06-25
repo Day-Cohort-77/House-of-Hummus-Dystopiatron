@@ -1,14 +1,20 @@
-export async function Veggies() {
-    const response = await fetch("http://localhost:8088/vegetables")
-    const veggies = await response.json()
-    let html = '<section class="choices__veggies options">'
-    html += "<h2>Vegetables</h2>"
-    html += veggies.map(veggie => `
-        <label>
-            <input type="radio" name="vegetable" value="${veggie.id}" />
-            ${veggie.type} <span class="price">($${veggie.price?.toFixed(2) ?? "0.00"})</span>
-        </label>
-    `).join("")
-    html += "</section>"
-    return html
+import { setVegetable } from "./TransientState.js";
+
+export const veggies = async () => {
+    const response = await fetch("http://localhost:8088/vegetables");
+    const vegetables = await response.json();
+ const veggiesHTML = `
+    ${vegetables.map((vegetable) => {
+return `<input type="radio" name="veggie" value=${vegetable.id} id="veggie--${vegetable.id}">${vegetable.type} $${vegetable.price}`} ).join(" ")}
+`
+return veggiesHTML
 }
+
+
+const vegetableSelection = (changeEvent) => {
+    if (changeEvent.target.name === "veggie") {
+         setVegetable(changeEvent.target.value);
+    }
+}
+
+document.addEventListener("change", vegetableSelection)

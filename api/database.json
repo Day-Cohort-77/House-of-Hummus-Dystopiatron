@@ -130,84 +130,36 @@
       "price": 5.2
     }
   ],
-  "purchases": [
+  "orders": [
     {
       "entreeId": 1,
-      "vegetableId": 1,
+      "vegetableId": 3,
       "sideId": 1,
       "id": 1
     },
     {
       "entreeId": 1,
       "vegetableId": 1,
-      "sideId": 1,
+      "sideId": 6,
       "id": 2
     },
     {
-      "entreeId": 2,
-      "vegetableId": 1,
-      "sideId": 1,
+      "entreeId": 4,
+      "vegetableId": 6,
+      "sideId": 6,
       "id": 3
     },
     {
-      "entreeId": 10,
+      "entreeId": 1,
       "vegetableId": 9,
-      "sideId": 6,
+      "sideId": 1,
       "id": 4
     },
     {
-      "entreeId": 10,
-      "vegetableId": 7,
+      "entreeId": 8,
+      "vegetableId": 8,
       "sideId": 6,
       "id": 5
-    },
-    {
-      "entreeId": 1,
-      "vegetableId": 1,
-      "sideId": 1,
-      "id": 6
-    },
-    {
-      "entreeId": 1,
-      "vegetableId": 1,
-      "sideId": 1,
-      "id": 7
-    },
-    {
-      "entreeId": 7,
-      "vegetableId": 9,
-      "sideId": 6,
-      "id": 8
-    },
-    {
-      "entreeId": 1,
-      "vegetableId": 1,
-      "sideId": 1,
-      "id": 9
-    },
-    {
-      "entreeId": 4,
-      "vegetableId": 5,
-      "sideId": 6,
-      "id": 10
-    },
-    {
-      "entreeId": 1,
-      "vegetableId": 1,
-      "sideId": 1,
-      "id": 11
-    },
-    {
-      "entreeId": 10,
-      "vegetableId": 9,
-      "sideId": 6,
-      "id": 12
-    },
-    {
-      "entreeId": 4,
-      "vegetableId": 8,
-      "sideId": 3,
-      "id": 13
     }
   ]
 }
